@@ -1,18 +1,16 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools"]
 
 [project]
 name = "nesh-model"
 description = ''
 readme = "README.md"
 requires-python = ">=3.8"
-license = "MIT"
 keywords = []
 authors = [
   { name = "Dhinesh Devanathan", email = "dhineshdevanathan@gmail.com" },
 ]
-version="2025.08.08.dev01"
+version="2025.08.09.dev01"
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
@@ -25,7 +23,8 @@ classifiers = [
   "Programming Language :: Python :: Implementation :: PyPy",
 ]
 dependencies = [
-  "keras"
+  "keras",
+  "jax[cpu]"
 ]
 
 [project.urls]
@@ -34,4 +33,4 @@ Issues = "https://github.com/neshdev/python-community-model/issues"
 Source = "https://github.com/neshdev/python-community-model"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/foo"]
+packages = ["src/nesh_model"]
