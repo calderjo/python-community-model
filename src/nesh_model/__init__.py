@@ -1,6 +1,7 @@
 import keras
 
 class MyModel(keras.Model):
+    # lol
     def __init__(self):
         super().__init__()
         self.dense1 = keras.layers.Dense(32, activation="relu")
